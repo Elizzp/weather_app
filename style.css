@@ -46,22 +46,31 @@ body{
 
 .Search{
     text-align: center;
+    display: flex;
+    justify-content: center;  
 }
 .Search >*{
-    padding: 10px; 
+    padding: 8px; 
+    margin-bottom: 20px;
+    margin-left: 10px;
 }
 
 input{
     background-color: hsl(243, 23%, 30%);
     border: 0cm;
-    border-radius: 3px;
+    border-radius: 7px;
+    font-size: 12px;
     color: hsl(0, 0%, 100%);
+    width: 25%;
 }
 button{
     background-color: hsl(233, 67%, 56%);
     color:hsl(0, 0%, 100%);
     border: 0cm;
-    border-radius: 3px;
+    border-radius: 7px;
+    font-size: 12px;
+    width: 5%;
+    max-height: 100%;
 }
 
 .container{
@@ -71,7 +80,6 @@ button{
     margin-right: 10%;
     gap: 20px ;
 }
-
 .container .today{
     flex: 2;
     margin-left: 20px ;
@@ -99,7 +107,6 @@ button{
     height: 1em;  
     width: auto;
 }
-
 .container .general_informations .left_side{
     display: flex;
     flex-direction: column;
@@ -130,7 +137,9 @@ button{
     padding-top: 15px;
 }
 .container .precise_info > div p{
-    font-size: small;
+    font-size: 12px;
+    color: hsl(250, 6%, 84%);
+    font-weight: 100;
     font-weight: 400;
 }
 
@@ -155,7 +164,7 @@ button{
     padding: 10px;
 }
 
-.container .hourly_forecast > div {
+.container .hourly_forecast > div:not(:first-child) {
     gap: 10px;
     margin: 15px ;
     border-radius: 5px;
@@ -163,15 +172,19 @@ button{
     background-color: hsl(243, 23%, 30%);
     border: 3px;
 }
+.container .hourly_forecast div:first-child{
+    display: flex;
+    padding: 10px;
+} 
+
 .container .hourly_forecast select{
+    margin-left: auto;
     padding: 2px;
+    border: 0px;
     color: hsl(0, 0%, 100%);
     background-color: hsl(243, 23%, 30%);
     border-radius: 3px;
     width: 80px ;
-    position: relative;
-    top: 5px;
-    right: 0px;
 }
 
 .attribution { font-size: 11px; text-align: center; }
