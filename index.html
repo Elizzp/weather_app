@@ -2,89 +2,96 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
   <title>Frontend Mentor | Weather app</title>
+  <link href="style.css" rel="stylesheet"/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
 
 </head>
 <body>
-  <div class="up">
-    <img src = "assets/images/logo.svg" />
-    <p>Weather Now</p>
-    <form>
-      <select> 
-        <option disabled selected hidden>Units</option>
-        <option >Switch to imperial</option>
-        <hr />
-        <optgroup label="Temperature">
-          <option value="Celsius"> Celsuis (°C) </option>
-          <option value="Fahrenheit"> Fahrenheit (°F) </option>
-        </optgroup>
-        <hr /> 
-        <optgroup label="Wind Speed">
-          <option value="kmh"> km/h </option>
-          <option value="mph"> mph </option>
-        </optgroup>
-        <hr />
-        <optgroup label="Precipitation">
-          <option value="Millimeters"> Millimeters (mm) </option>
-          <option value="Inches"> Inches (in) </option>
-        </optgroup>
-      </select>
-    </form>
-    
+  <img class="logo" src="assets/images/logo.svg" />
+  <div class="custom_select">
+    <img src="assets/images/icon-units.svg"/>
+    <select id="Units">
+      <option disabled selected hidden>Units</option>
+      <option>Switch to imperial</option>
+      <hr />
+      <optgroup label="Temperature">
+        <option value="Celsius"> Celsuis (°C) </option>
+        <option value="Fahrenheit"> Fahrenheit (°F) </option>
+      </optgroup>
+      <hr />
+      <optgroup label="Wind Speed">
+        <option value="kmh"> km/h </option>
+        <option value="mph"> mph </option>
+      </optgroup>
+      <hr />
+      <optgroup label="Precipitation">
+        <option value="Millimeters"> Millimeters (mm) </option>
+        <option value="Inches"> Inches (in) </option>
+      </optgroup>
+    </select>
   </div>
   
-  <h1>How's the sky looking today? </h1>
+  <h1 id="Title">How's the sky looking today? </h1>
 
   <div class="Search">
-    <input type="search" id="place_search"/>
+    <input type="search" id="place_search" placeholder="Search for a place ..."/>
     <button>Search</button>
   </div>
 
-  <div class="today">
-    <h3> Place and country </h3>
-    <p>Today, date</p>
-    <h2> number °</h2>
-    <div class="feels_like">
-      <p>Feels like</p>
-      <h3> Number °</h3>
+  <div class="container">
+    <div class="today">
+      <h3> Place and country </h3>
+      <p>Today, date</p>
+      <h2> number °</h2>
     </div>
-    <div class="humidity">
-      <p>Humidity</p>
-      <h3> Number %</h3>
+    <div class="precise_info">
+      <div>
+        <p>Feels like</p>
+        <h3> Number °</h3>
+      </div>
+      <div>
+        <p>Humidity</p>
+        <h3> Number %</h3>
+      </div>
+      <div class="wind">
+        <p>Wind</p>
+        <h3> Number units</h3>
+      </div>
+      <div class="precipitation">
+        <p>Precipitation</p>
+        <h3> Number units</h3>
+      </div>
     </div>
-    <div class="wind">
-      <p>Wind</p>
-      <h3> Number units</h3>
+    <div class="daily_forecast">
+      insert 7 days
     </div>
-    <div class="precipitation">
-      <p>Precipitation</p>
-      <h3> Number units</h3>
+    <div class="hourly_forecast">
+      <h1> Hourly forecast</h1>
+      <select>
+        <option>Monday</option>
+        <option>Tuesday</option>
+        <option>Wednesday</option>
+        <option>Thursday</option>
+        <option>Friday</option>
+        <option>Saturday</option>
+        <option>Sunday</option>
+      </select>
+      <div>Hour 1</div>
     </div>
   </div>
+  
 
-  <div class="daily_forecast">
-    insert 7 days
-
-  </div>
-
-  <div class="hourly_forecast">
-    <h1> Hourly forecast</h1>
-    <select>
-      <option>Monday</option>
-      <option>Tuesday</option>
-      <option>Wednesday</option>
-      <option>Thursday</option>
-      <option>Friday</option>
-      <option>Saturday</option>
-      <option>Sunday</option>
-    </select>
-    <div>Hour 1</div>
-
-  </div>
+  
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
