@@ -10,52 +10,85 @@
 
 </head>
 <body>
-
-  Units
-
-  Switch to Imperial/Metric
-
-  Temperature
-
-  Celsius (°C)
-  Fahrenheit (°F)
-
-  Wind Speed
-
-  km/h
-  mph
-
-  Precipitation
-
-  Millimeters (mm)
-  Inches (in)
-
-  How's the sky looking today?
-
-  Search for a city, e.g., New York
-  Search
-
-  Feels like
-  <!-- Insert temperature here -->
-
-  Humidity
-  <!-- Insert humidity here -->
-
-  Wind
-  <!-- Insert wind here -->   
+  <div class="up">
+    <img src = "assets/images/logo.svg" />
+    <p>Weather Now</p>
+    <form>
+      <select> 
+        <option disabled selected hidden>Units</option>
+        <option >Switch to imperial</option>
+        <hr />
+        <optgroup label="Temperature">
+          <option value="Celsius"> Celsuis (°C) </option>
+          <option value="Fahrenheit"> Fahrenheit (°F) </option>
+        </optgroup>
+        <hr /> 
+        <optgroup label="Wind Speed">
+          <option value="kmh"> km/h </option>
+          <option value="mph"> mph </option>
+        </optgroup>
+        <hr />
+        <optgroup label="Precipitation">
+          <option value="Millimeters"> Millimeters (mm) </option>
+          <option value="Inches"> Inches (in) </option>
+        </optgroup>
+      </select>
+    </form>
+    
+  </div>
   
-  Precipitation
-  <!-- Insert precipitation here -->
+  <h1>How's the sky looking today? </h1>
 
-  Daily forecast
-  <!-- Insert daily forecast for the next 7 days here -->
+  <div class="Search">
+    <input type="search" id="place_search"/>
+    <button>Search</button>
+  </div>
 
-  Hourly forecast
-  <!-- Insert hourly forecast for the selected day here -->
+  <div class="today">
+    <h3> Place and country </h3>
+    <p>Today, date</p>
+    <h2> number °</h2>
+    <div class="feels_like">
+      <p>Feels like</p>
+      <h3> Number °</h3>
+    </div>
+    <div class="humidity">
+      <p>Humidity</p>
+      <h3> Number %</h3>
+    </div>
+    <div class="wind">
+      <p>Wind</p>
+      <h3> Number units</h3>
+    </div>
+    <div class="precipitation">
+      <p>Precipitation</p>
+      <h3> Number units</h3>
+    </div>
+  </div>
+
+  <div class="daily_forecast">
+    insert 7 days
+
+  </div>
+
+  <div class="hourly_forecast">
+    <h1> Hourly forecast</h1>
+    <select>
+      <option>Monday</option>
+      <option>Tuesday</option>
+      <option>Wednesday</option>
+      <option>Thursday</option>
+      <option>Friday</option>
+      <option>Saturday</option>
+      <option>Sunday</option>
+    </select>
+    <div>Hour 1</div>
+
+  </div>
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Eliz</a>.
   </div>
 </body>
 </html>
