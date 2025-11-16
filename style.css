@@ -17,7 +17,14 @@ body{
     width: 120px;
 }
 
-.custom_select{
+.unit_select *{
+    background-color: hsl(243, 23%, 24%);
+    border: 0px;  
+    font-size: 18;
+    color: hsl(0, 0%, 100%);
+    max-width: 70%;
+}
+.unit_select {
     padding: 5px;
     background-color: hsl(243, 23%, 24%);
     border-radius: 3px;
@@ -27,14 +34,6 @@ body{
     top: 20px;
     right: 40px;
     display: flex;
-}
-.custom_select select {
-    border: 0px;
-    font-size: 18;
-    color: hsl(0, 0%, 100%);
-    background-color: hsl(243, 23%, 24%);
-    border-radius: 3px;
-    width: 100%;
 }
 
 #Title{
@@ -73,16 +72,43 @@ button{
     gap: 20px ;
 }
 
-.container .daily{
+.container .today{
     flex: 2;
     margin-left: 20px ;
     margin-right: 20px ;
 }
-.container .today{
+.container .general_informations{
     background-image: url("assets/images/bg-today-large.svg");
     background-repeat: no-repeat;
     background-size: contain;
     height: 50%;
+    display: flex;
+    align-items: center;
+}
+.container .general_informations .right_side{
+    flex:1; 
+    text-align: right;
+    align-items: center;
+    font-size: 50px;
+    font-weight: 100;
+    margin: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+.container .general_informations .right_side img {
+    height: 1em;  
+    width: auto;
+}
+
+.container .general_informations .left_side{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin: 20px;;
+}
+.container .general_informations .left_side p{
+    font-size: 10px;
+    margin-top: 10px;
 }
 
 .container .precise_info{
