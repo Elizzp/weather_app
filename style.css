@@ -24,6 +24,10 @@ body{
     color: hsl(0, 0%, 100%);
     max-width: 70%;
 }
+.unit_select #Units option{
+	border-radius: 3px;
+    padding: 0 10px;
+}
 .unit_select {
     padding: 5px;
     background-color: hsl(243, 23%, 24%);
@@ -121,6 +125,7 @@ button{
 .container .precise_info{
     display: flex;
     height: fit-content;
+    margin-bottom: 20px;
 }
 .container .precise_info > div {
     margin: 5px ;
@@ -145,6 +150,7 @@ button{
 
 .container .daily_forecast{
     display: flex;
+    margin-top: 10px;
 }
 
 .container .daily_forecast > div {
@@ -171,7 +177,17 @@ button{
     padding: 10px;
     background-color: hsl(243, 23%, 30%);
     border: 3px;
+    display: flex;
 }
+.container .hourly_forecast > div:not(:first-child) p{
+    flex: 1;
+    text-align: right;
+}
+.container .hourly_forecast > div:not(:first-child) img {
+    height: 25px;  
+    width: auto;
+}
+
 .container .hourly_forecast div:first-child{
     display: flex;
     padding: 10px;
